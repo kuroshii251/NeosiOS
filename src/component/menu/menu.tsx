@@ -1,7 +1,7 @@
 export default function Menu(){
     return (
         <>
-        <div className="col w-300 flex justify-center items-center mx-auto rounded-xl p-4 bg-[#D0FF00] border-2 border-black">
+        <div className="col w-150 mx-auto rounded-xl p-4 bg-[#D0FF00] border-2 border-black">
             <div className="flex justify-center items-center">
                 <ul className="flex list-style-none space-x-5">
                     <li>
