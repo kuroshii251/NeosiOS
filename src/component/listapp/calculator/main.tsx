@@ -24,16 +24,14 @@ export default function Calculator({tab, setTab, inputs, numberss, handleInput})
             <i className="fa-solid fa-x"></i>
 
             </button>
-           
           </div>
-          
           </div>
       
         <div className=" inset-0 z-40 flex justify-center items-center">
             <div className="flex mt-5 justify-center pt-10 items-center align-items-center">
               <div className="bg-white scale-100 border-black border-2 border-r-10 border-b-10 h-100 rounded-xl  p-3 w-85">
                 <div className="">
-                  <input type="text" value={inputs} className='w-75 rounded-md border-2 border-r-5  border-b-5 h-20 text-black' disabled/>
+                  <input type="text" value={inputs} className='w-75 p-2 rounded-md border-2 border-r-5  border-b-5 h-20 text-black' disabled/>
                 </div>
                 <div className="grid grid-cols-4 mt-3 gap-2 ">
                   {numberss.map ((items) => (
@@ -74,17 +72,14 @@ export default function Calculator({tab, setTab, inputs, numberss, handleInput})
             <i className="fa-solid fa-x"></i>
 
             </button>
-           
           </div>
-          
-          
           </div>
       
          <div className=" inset-0 flex justify-center items-center">
             <div className="flex justify-center pt-3 items-center align-items-center">
               <div className="bg-white scale-90 border-black border-2 border-r-10 border-b-10 h-100 rounded-xl  p-3 w-85">
                 <div className="">
-                  <input type="text" value={inputs} className='w-75 rounded-md border-2 border-r-5  border-b-5 h-20 text-black' disabled/>
+                  <input type="text" value={inputs} className='w-75 p-2 rounded-md border-2 border-r-5  border-b-5 h-20 text-black' disabled/>
                 </div>
                 <div className="grid grid-cols-4 mt-3 gap-2 ">
                   {numberss.map ((items) => (

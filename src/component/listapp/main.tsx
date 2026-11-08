@@ -16,7 +16,7 @@ export default function ListApp({handleTab}) {
 </div>
 <div className="bg-white border-1 border-black p-3 w-20 h-20 shadow-[2px_2px_0_0] shadow-black rounded-lg">
                 <div className="flex justify-center items-center mx-auto pt-1">
-<button onClick={() => handleTab(10)}>
+<button onClick={() => handleTab(5)}>
 <i className="fa-brands fa-firefox-browser    text-center text-2xl mx-auto"></i>
 <p className="text-xs font-semibold mt-1">Browser</p>
 </button>
@@ -36,9 +36,9 @@ export default function ListApp({handleTab}) {
 
 <div className="bg-white border-1 border-black p-3 w-20 h-20 shadow-[2px_2px_0_0] shadow-black rounded-lg">
                 <div className="flex justify-center items-center mx-auto pt-1">
-<button>
-<i className="fa-brands fa-spotify text-center text-2xl mx-auto"></i>
-<p className="text-xs font-semibold mt-1">Spotify</p>
+<button onClick={() => handleTab(12)}>
+<i className="fa-solid fa-music text-center text-2xl mx-auto"></i>
+<p className="text-xs font-semibold mt-1">Music</p>
 </button>
 </div>
 </div>

@@ -3,3 +3,8 @@
 body {
     background-color: #FFD756;
 }
+
+.bgimage {
+    background-image: url("./assets/image.png");
+
+}

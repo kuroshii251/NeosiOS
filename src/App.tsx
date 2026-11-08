@@ -5,6 +5,7 @@ import Menu from './component/menu/menu'
 import ListApp from './component/listapp/main';
 import Calculator from './component/listapp/calculator/main';
 import BrowserApp from './component/listapp/browser/main';
+import Music from './component/listapp/music/main';
 
 function App() {
      const [tab, setTab] = useState(0);
@@ -37,6 +38,7 @@ function App() {
 
 <Calculator handleInput={handleInput} tab={tab} setTab={setTab} numberss={numberss} inputs={inputs}/>
 <BrowserApp tab={tab} setTab={setTab} />
+<Music tab={tab} setTab={setTab}/>
   
 </div>
 
