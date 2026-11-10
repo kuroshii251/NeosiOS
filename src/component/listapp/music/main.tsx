@@ -5,6 +5,15 @@ import songphoto4 from "../../../assets/harvey.png"
 import songphoto5 from "../../../assets/herecomesthesun.png"
 import songphoto6 from "../../../assets/wonderwall.png"
 import songphoto7 from "../../../assets/stress_relief.png"
+import riskitall from "../../../assets/song/riskitall.mp3"
+import herecomesthesun from "../../../assets/song/herecomesthesun.mp3"
+import wonderwall from "../../../assets/song/wonderwall.mp3"
+import seasons from "../../../assets/song/seasons.mp3"
+import harvey from "../../../assets/song/harvey.mp3"
+import gluesong from "../../../assets/song/gluesong.mp3"
+import stressrelief from "../../../assets/song/stressrelief.mp3"
+
+import { useEffect, useRef, useState } from "react"
 
 
 
@@ -13,54 +22,80 @@ export default function Music({tab, setTab}){
 
     const ListSong = [
         {
-            id: 1,
+            id: 0,
             images: songphoto1,
             song_name: "Risk It All",
-            author: "Bruno Mars"
+            author: "Bruno Mars",
+            audio: riskitall
+
+        },
+          {
+            id: 1,
+            images: songphoto2,
+            song_name: "Seasons",
+            author: "Wave to Earth",
+            audio: seasons
+
 
         },
           {
             id: 2,
-            images: songphoto2,
-            song_name: "Seasons",
-            author: "Wave to Earth"
+            images: songphoto3,
+            song_name: "Glue Song",
+            author: "beabadoobe",
+            audio:gluesong
+
 
         },
           {
             id: 3,
-            images: songphoto3,
-            song_name: "Glue Song",
-            author: "beabadoobe"
-
-        },
-          {
-            id: 4,
             images: songphoto4,
             song_name: "Harvey",
-            author: "Her's"
+            author: "Her's",
+            audio:harvey
+
 
         },
           {
-            id:5,
+            id:4,
             images: songphoto5,
             song_name: "Here Comes The Sun",
-            author: "The Beatles"
+            author: "The Beatles",
+            audio:herecomesthesun
+
+
+        },
+          {
+            id: 5,
+            images: songphoto6,
+            song_name: "Wonderwall",
+            author: "Oasis",
+            audio:wonderwall
+
 
         },
           {
             id: 6,
-            images: songphoto6,
-            song_name: "Wonderwall",
-            author: "Oasis"
-
-        },
-          {
-            id: 7,
             images: songphoto7,
             song_name: "Stress Relief",
-            author: "Late Night Drive Home"
+            author: "Late Night Drive Home",
+            audio:stressrelief
+
         }
     ]
+
+      const musicc = useRef(new Audio());
+      const [mutes] = useState<boolean>(false);
+
+      const handleMusic = (id: number) => {
+        musicc.current.src = ListSong[id].audio;
+        musicc.current.play();
+      }
+
+
+      useEffect(() => {
+        musicc.current.muted = mutes;
+      }, [mutes]);
     return (
         <>
       <div className='col p-5 justify-center absolute inset-0 items-center flex items-center scale-80 pt-0 '>
@@ -102,9 +137,8 @@ export default function Music({tab, setTab}){
                     </div>
 
                     <div className="flex flex-col justify-end w-auto  ">
-                    <button className="bg-yellow-500 p-2 cursor-pointer aspect-square  rounded-full">
-<i className="fa-solid fa-play"></i>
-
+                    <button className="bg-yellow-500 p-2 cursor-pointer aspect-square  rounded-full" onClick={() => handleMusic(items.id)} type="button">
+<h1>Play</h1>
                     </button>
                     </div>
                 </div>
@@ -156,7 +190,9 @@ export default function Music({tab, setTab}){
                     </div>
 
                     <div className="flex flex-col justify-end w-auto  ">
-                    <button className="bg-yellow-500 p-2 cursor-pointer aspect-square  rounded-full">
+                    <button className="bg-yellow-500 p-2 cursor-pointer aspect-square  rounded-full" onClick={() => handleMusic(items.id)} type="button">
+                                <i className={`fa-solid text-black ${mutes ? "fa-volume" : "fa-volume-xmark"}`}></i>
+
 <i className="fa-solid fa-play"></i>
 
                     </button>

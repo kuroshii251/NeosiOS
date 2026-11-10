@@ -22,7 +22,6 @@ export default function Calculator({tab, setTab, inputs, numberss, handleInput})
             </button>
             <button onClick={() => setTab(0)}>
             <i className="fa-solid fa-x"></i>
-
             </button>
           </div>
           </div>

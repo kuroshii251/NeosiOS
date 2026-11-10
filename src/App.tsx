@@ -6,6 +6,9 @@ import ListApp from './component/listapp/main';
 import Calculator from './component/listapp/calculator/main';
 import BrowserApp from './component/listapp/browser/main';
 import Music from './component/listapp/music/main';
+import Clocks from './component/listapp/clock/main';
+import Clock from './component/listapp/clock/clock';
+import StopWatch from './component/listapp/clock/stopwatch';
 
 function App() {
      const [tab, setTab] = useState(0);
@@ -22,6 +25,8 @@ function App() {
         setInputs(String(eval(inputs)));
       } else if(numberss == "AC") {
         setInputs("");
+      } else if(numberss == "Del"){
+        setInputs((value) => value.slice(0, -1))
       } else {
       setInputs((value) => value + numberss);
 
@@ -39,6 +44,9 @@ function App() {
 <Calculator handleInput={handleInput} tab={tab} setTab={setTab} numberss={numberss} inputs={inputs}/>
 <BrowserApp tab={tab} setTab={setTab} />
 <Music tab={tab} setTab={setTab}/>
+<Clocks tab={tab} setTab={setTab}/>
+<Clock tab={tab} setTab={setTab}/>
+<StopWatch tab={tab} setTab={setTab}/>
   
 </div>
 

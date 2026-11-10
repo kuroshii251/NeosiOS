@@ -1,4 +1,11 @@
+import { useState } from "react";
+
 export default function BrowserApp({tab, setTab }){
+const [q,setQ] = useState("");
+
+  const handleSearch = () => {
+    window.location.href = `https://google.com/search?q=${q}`;  
+  }
     return (
         <>
           <div className={`${tab === 10 ? "block" : "hidden"} col p-5 justify-center absolute  items-center `}>
@@ -15,7 +22,7 @@ export default function BrowserApp({tab, setTab }){
               <p className='text-center font-semibold'>Neosi OS Browser</p>
 
           <div className='flex   justify-center-end space-x-5'>
-             <button onClick={() => setTab(1)}>
+             <button onClick={() => setTab(5)}>
           <i className="fa-solid fa-picture-in-picture"></i>
             </button>
             <button onClick={() => setTab(0)}>
@@ -27,20 +34,22 @@ export default function BrowserApp({tab, setTab }){
             <div className="flex flex-col justify-center  items-center h-100">    
                 <h1 className="text-5xl font-bold mb-10">Neosi OS Browser</h1>
 <div className="  ">
-  <i className="fa-solid fa-magnifying-glass absolute flex py-3 p-3 flex justify-end"></i>
-<input type="text" className="shadow shadow-black p-2 w-100 rounded-md " name="" id="" />
+   <form action={handleSearch} method="POST">
+               
+<input type="text" value={q} onChange={(e) => setQ(e.target.value)} className="shadow shadow-black p-2 w-80 rounded-md " name="q" id="" placeholder="Search..."/>
+                </form>
 </div>
 
 <div className="flex flex-row space-x-5 translate-y-16">
-    <div className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
+    <a href="youtube.com" className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
         <i className="fa-brands  fa-youtube text-2xl"></i>
-    </div>
-     <div className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
+    </a>
+     <a href="instagram.com" className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
 <i className="fa-brands fa-instagram text-2xl"></i>
-    </div>
-     <div className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
+    </a>
+     <a href="github.com" className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
 <i className="fa-brands fa-github text-2xl"></i>
-    </div>
+    </a>
    <div className="">
     </div> 
 
@@ -84,21 +93,24 @@ export default function BrowserApp({tab, setTab }){
             <div className="flex flex-col justify-center items-center h-100">    
                 <h1 className="text-3xl font-bold mb-10 text-center">Neosi OS Browser</h1>
               <div className="  ">
-  <i className="fa-solid fa-magnifying-glass absolute flex py-3 p-3 flex justify-end"></i>
-<input type="text" className="shadow shadow-black p-2 w-80 rounded-md " name="" id="" />
+                <form action={handleSearch} method="POST">
+               
+<input type="text" value={q} onChange={(e) => setQ(e.target.value)} className="shadow shadow-black p-2 w-80 rounded-md " name="q" id="" placeholder="Search..."/>
+                </form>
+
 </div>
 
 
 <div className="flex flex-row space-x-5 translate-y-20">
-    <div className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
+    <a href="youtube.com" className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
         <i className="fa-brands  fa-youtube text-2xl"></i>
-    </div>
-     <div className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
+    </a>
+     <a href="instagram.com" className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
 <i className="fa-brands fa-instagram text-2xl"></i>
-    </div>
-     <div className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
+    </a>
+     <a href="github.com" className="bg-yellow-500 border-2 p-3 border-r-5 border-b-5 rounded-md">
 <i className="fa-brands fa-github text-2xl"></i>
-    </div>
+    </a>
    <div className="">
     </div> 
 </div>

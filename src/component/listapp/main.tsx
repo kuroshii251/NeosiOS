@@ -1,8 +1,6 @@
 export default function ListApp({handleTab}) {
     return (
         <>
-
-
         <div className="">
                  <div className="flex flex-row space-x-3 space-y-5 p-5">
          <div className="bg-white border-1 border-black p-3 w-20 h-20 shadow-[2px_2px_0_0] shadow-black rounded-lg">
@@ -12,7 +10,6 @@ export default function ListApp({handleTab}) {
 <p className="text-xs font-semibold mt-1">Calculator</p>
 </button>
 </div>
-
 </div>
 <div className="bg-white border-1 border-black p-3 w-20 h-20 shadow-[2px_2px_0_0] shadow-black rounded-lg">
                 <div className="flex justify-center items-center mx-auto pt-1">
@@ -57,7 +54,7 @@ export default function ListApp({handleTab}) {
 
 <div className="bg-white border-1 border-black p-3 w-20 h-20 shadow-[2px_2px_0_0] shadow-black rounded-lg">
     <div className="flex justify-center items-center mx-auto pt-1">
-<button>
+<button onClick={() => handleTab(15)}>
 <i className="fa-regular fa-clock text-center text-2xl mx-auto"></i>
 <p className="text-xs font-semibold mt-1">Clock</p>
 </button>

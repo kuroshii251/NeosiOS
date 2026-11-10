@@ -10,21 +10,9 @@ export default function Menu(){
 
                     </div>
                     </li>
-
-                    <li>
-         <div className="bg-white border-1 border-black p-3 shadow-[2px_2px_0_0] shadow-black rounded-lg">
-<i className="fa-solid fa-code"></i>
-                        </div>
-                    </li>
-                    
-                    <li>
-                    <div className="bg-white border-1 border-black p-3 shadow-[2px_2px_0_0] shadow-black rounded-lg">
-<i className="fa-solid fa-calculator"></i>
-                        </div>
-                    </li>
                     <li>
                           <div className="bg-white border-1 border-black p-3 shadow-[2px_2px_0_0] shadow-black rounded-lg">
-<i className="fa-solid fa-file-pen"></i>
+<i className="fa-solid fa-f ile-pen"></i>
                         </div>
 
                     </li>
